@@ -1,0 +1,94 @@
+[
+  {
+    "name": "campus-paris",
+    "url": "http://www.radiocampusparis.org:8000/stream_rcp"
+  },
+  {
+    "name": "tsonami",
+    "url": "http://rr.radiotsonami.org:8000/radio_tsonami"
+  },
+  {
+    "name": "radiovassiviere",
+    "url": "http://radiovassiviere.ice.infomaniak.ch/radiovassiviere-128.aac"
+  },
+  {
+    "name": "p-node",
+    "url": "http://stream.p-node.org/dab.mp3"
+  },
+  {
+    "name": "canalsud",
+    "url": "http://91.224.148.160:8000/canalsud-live"
+  },
+  {
+    "name": "pikez",
+    "url": "http://ecouter.pikez.space:8000/pikez_hd"
+  },
+  {
+    "name": "jetfm",
+    "url": "http://80.82.229.202/jetfm.mp3"
+  },
+  {
+    "name": "fr-bb",
+    "url": "http://ice.rosebud-media.de:8000/88vier"
+  },
+  {
+    "name": "lechodescabanes",
+    "url": "http://radio.lechodescabanes.fr:8000/playlist"
+  },
+  {
+    "name": "mayday-radiocanut",
+    "url": "http://live.francra.org:8000/radiocanut"
+  },
+  {
+    "name": "epsilonia-libertaire",
+    "url": "http://media.radio-libertaire.org:8080/radiolib"
+  },
+  {
+    "name": "inter-zones",
+    "url": "http://stream.p-node.org/zonezero.mp3"
+  },
+  {
+    "name": "campusfrance",
+    "url": "http://stream.radiocampus.fr:8000/campusfrance"
+  },
+  {
+    "name": "microrebelles",
+    "url": "https://diff.micros-rebelles.fr/128.ogg"
+  },
+  {
+    "name": "saintferreol",
+    "url": "http://live.francra.org:8000/RadioSaintFerreol"
+  },
+  {
+    "name": "ekodesgarrigues",
+    "url": "http://91.121.159.124:8000/eko-des-garrigues-32k.mp3"
+  },
+  {
+    "name": "radiogalere",
+    "url": "http://radiogalere.org:8080/galere"
+  },
+  {
+    "name": "pfm",
+    "url": "http://178.33.237.20:8000/stream.mp3"
+  },
+  {
+    "name": "declic",
+    "url": "http://ks39339.kimsufi.com/declic.mp3"
+  },
+  {
+    "name": "fpp",
+    "url": "http://radio.toile-libre.org:8000/fpp.mp3"
+  },
+  {
+    "name": "panik",
+    "url": "https://streaming.domainepublic.net/radiopanik.ogg"
+  },
+  {
+    "name": "alma",
+    "url": "http://shoutcast2.wirelessbelgie.be:8310/stream.mp3"
+  },
+  {
+    "name": "mne",
+    "url": "http://mne.out.airtime.pro:8000/mne_b"
+  }
+]
