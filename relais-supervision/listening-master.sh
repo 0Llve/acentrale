@@ -14,7 +14,7 @@ silence_detector () {
 }
 start_fingerprinting () {
 	(
-	ffmpeg -i $stream_url -flags +global_header -f segment -segment_time 6 -reset_timestamps 1 $file_base%d.wav 2>&1 | while read segment
+	sh -c 'echo $$ > '$pidfile'; exec ffmpeg -i '$stream_url' -flags +global_header -f segment -segment_time 6 -reset_timestamps 1 '$file_base'%d.wav 2>&1' | while read segment
 	do
 		echo $segment | grep Opening >/dev/null || continue
 		if [ -f "$file" ]
@@ -29,7 +29,7 @@ start_fingerprinting () {
 		echo 'delete f,s from fingerprints f right join songs s on f.song_id=s.song_id where created < (NOW() - INTERVAL '$delayed_relay_tolerance_minutes' MINUTE);' | mysql --login-path=dejavu dejavu
 		)
 	done
-	)& echo $! > $pidfile
+	)&
 	bash /root/relais-loop.sh $stream_name
 }
 while (true)
@@ -43,11 +43,11 @@ do
 	) 
 	echo $silentline | grep silence_start >/dev/null && (
 	echo "STOPING RECORD";
+	pkill -f ecoute
 	if [ -f $pidfile ] 
 	then
-		kill `cat $pidfile`
+		kill $(cat $pidfile)
 		rm $pidfile
-		pkill -f ecoute
 	fi
 	) 
 done
