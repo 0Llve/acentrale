@@ -3,6 +3,7 @@ stream_url=http://stream.p-node.org/acentrale320.mp3
 stream_name=$(basename $stream_url .mp3)
 file_base=/tmp/master-$stream_name
 silence_tolerance=10
+delayed_relay_tolerance_minutes=2
 pidfile=/var/run/fingerprinting-$stream_name.pid
 
 stream_exists () {
@@ -25,7 +26,7 @@ start_fingerprinting () {
 		file=`echo $segment | cut -d"'" -f2`
 		i=$((i+1))
 		[ $i -gt 36 ] && (
-		echo 'delete f,s from fingerprints f left join songs s on f.song_id=s.song_id where created < (NOW() - INTERVAL 1 MINUTE);' | mysql --login-path=dejavu dejavu
+		echo 'delete f,s from fingerprints f left join songs s on f.song_id=s.song_id where created < (NOW() - INTERVAL '$delayed_relay_tolerance_minutes' MINUTE);' | mysql --login-path=dejavu dejavu
 		)
 	done
 	)& echo $! > $pidfile
