@@ -11,6 +11,7 @@ git clone https://github.com/worldveil/dejavu.git ./dejavu
 cd dejavu
 python example.py
 echo "alter table songs add column created timestamp default CURRENT_TIMESTAMP" | mysql dejavu
+# Encrypting MySQL Credentials
+mysql_config_editor set --login-path=dejavu --host=localhost --user=dejavu --password
 ```
-
 

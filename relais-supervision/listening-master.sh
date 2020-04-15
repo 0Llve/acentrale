@@ -25,7 +25,7 @@ start_fingerprinting () {
 		file=`echo $segment | cut -d"'" -f2`
 		i=$((i+1))
 		[ $i -gt 36 ] && (
-		echo 'delete f,s from fingerprints f left join songs s on f.song_id=s.song_id where created < (NOW() - INTERVAL 1 MINUTE);' | mysql -udejavu -p'dejavupassword' dejavu
+		echo 'delete f,s from fingerprints f left join songs s on f.song_id=s.song_id where created < (NOW() - INTERVAL 1 MINUTE);' | mysql --login-path=dejavu dejavu
 		)
 	done
 	)& echo $! > $pidfile
