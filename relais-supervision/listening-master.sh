@@ -30,7 +30,7 @@ start_fingerprinting () {
 		)
 	done
 	)& echo $! > $pidfile
-	bash /root/relais-loop.sh 
+	bash /root/relais-loop.sh $stream_name
 }
 while (true)
 do
